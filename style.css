@@ -9,13 +9,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+a {
+  text-decoration: none;
 }
 
 .container {
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  max-width: 100vw;
-  padding: 0 15vw;
+  max-width: 100%;
+  padding: 0 14vw;
+  height: 100%;
 }
 .navbar {
   position: sticky;
@@ -28,14 +36,14 @@
 }
 
 .nav-left h1 {
-  font-size: 2.5vw;
+  font-size: 40px;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 1.4vw;
+  gap: 2rem;
+  font-size: 18px;
 }
 ul {
   display: flex;
@@ -43,9 +51,9 @@ ul {
   gap: 2rem;
 }
 
-li:hover{
-    color: red;
-    cursor: pointer;
+li:hover, .active {
+  color: #7368a7;
+  cursor: pointer;
 }
 .btn {
   padding: 8px 18px;
@@ -55,40 +63,42 @@ li:hover{
   border: none;
   border-radius: 20px;
   font-weight: 500;
+  font-size: 16px;
 }
-.btn:hover{
-    background: var(--text-color);
-    color: var(--btn-color);
-    cursor: pointer;
+.btn:hover {
+  background: var(--text-color);
+  color: var(--btn-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6rem;
+  gap: 2rem;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
 }
 
 /* Left side Section */
-#left{
-    flex: 1;
-   
+#left {
+  flex: 1;
 }
 
-#left h1{
-    font-size: 3vw;
-    padding: 30px 0;
+#left h1 {
+  font-size: 50px;
+  padding: 30px 0;
 }
-#left p{
-    padding-bottom: 30px;
+#left p {
+  padding-bottom: 30px;
+  padding-right: 40px;
+  font-size: 16px;
 }
-
 
 /* Right Side Section */
-#right{
-    flex: 1;
-    padding-left: 20px;
+#right {
+  flex: 1;
+  padding-left: 20px;
 }
 
 #right form {
@@ -101,9 +111,10 @@ main {
   padding: 30px 20px;
   text-align: center;
   width: 100%;
+  border-radius: 10px;
 }
-.inputs{
-    margin-top: 15px;
+.inputs {
+  margin-top: 15px;
 }
 
 form input {
@@ -114,11 +125,11 @@ form input {
   height: 20px;
   padding: 20px;
   margin: 10px;
+  font-size: 15px;
 }
 
-form h2{
-    font-size: 2.5vw;
-
+form h2 {
+  font-size: 2.5vw;
 }
 .buttons {
   width: 94%;
@@ -137,6 +148,63 @@ form h2{
   font-size: 16px;
   border-radius: 20px;
 }
-.btn-1{
-    background: var(--bg-color);
+.btn-1 {
+  background: var(--bg-color);
+}
+.middle span {
+  border-bottom: 1px solid #000;
+}
+
+@media screen and (min-width: 680px) and (max-width: 920px) {
+  .container {
+    padding: 0 8vw;
+  }
+  main {
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 678px) {
+  .container {
+    padding: 0 10vw;
+  }
+  .nav-right {
+    display: none;
+  }
+  .nav-left h1 {
+    font-size: 25px;
+  }
+  main {
+    flex-direction: column;
+    text-align: center;
+    gap: 3.5rem;
+  }
+  #left h1 {
+    font-size: 45px;
+  }
+  #left p {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 0 10vw;
+  }
+  .nav-right {
+    display: none;
+  }
+  .nav-left h1 {
+    font-size: 25px;
+  }
+  main {
+    flex-direction: column;
+    text-align: center;
+    gap: 3.5rem;
+  }
+  #left h1 {
+    font-size: 45px;
+  }
+  #left p {
+    padding-right: 0;
+  }
 }
