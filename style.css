@@ -51,7 +51,8 @@ ul {
   gap: 2rem;
 }
 
-li:hover, .active {
+li:hover,
+.active {
   color: #7368a7;
   cursor: pointer;
 }
@@ -70,6 +71,9 @@ li:hover, .active {
   color: var(--btn-color);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.mobile-menu {
+  display: none;
 }
 main {
   display: flex;
@@ -101,7 +105,7 @@ main {
   padding-left: 20px;
 }
 
-#right form {
+form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +113,6 @@ main {
   background: var(--text-color);
   color: var(--bg-color);
   padding: 30px 20px;
-  text-align: center;
   width: 100%;
   border-radius: 10px;
 }
@@ -117,7 +120,7 @@ main {
   margin-top: 15px;
 }
 
-form input {
+.inputs input {
   width: 94%;
   outline: none;
   border: 1px solid #999;
@@ -127,9 +130,20 @@ form input {
   margin: 10px;
   font-size: 15px;
 }
+.t_and_c {
+  width: 90%;
+  color: #999;
+  margin: 12px 0;
+}
+
+.checkBox {
+  accent-color: #25d9c4;
+  width: 15px;
+  height: 15px;
+}
 
 form h2 {
-  font-size: 2.5vw;
+  font-size: 35px;
 }
 .buttons {
   width: 94%;
@@ -144,15 +158,35 @@ form h2 {
   background: var(--login-btn-color);
   color: var(--text-color);
   padding: 10px 15px;
-  margin: 1vh 0;
+  margin: 10px 0;
   font-size: 16px;
   border-radius: 20px;
 }
 .btn-1 {
   background: var(--bg-color);
 }
-.middle span {
-  border-bottom: 1px solid #000;
+
+hr {
+  margin-top: 20px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.buttons p {
+  width: 6%;
+  padding: 0 2px;
+  background: #fff;
+  margin-top: -12px;
+  margin-left: 48%;
+  font-weight: 500;
+  color: #999;
+}
+.sign_in {
+  margin: 10px;
+  color: #999;
+}
+.sign_in a {
+  color: var(--login-btn-color);
 }
 
 @media screen and (min-width: 680px) and (max-width: 920px) {
@@ -166,13 +200,18 @@ form h2 {
 
 @media screen and (min-width: 420px) and (max-width: 678px) {
   .container {
-    padding: 0 10vw;
+    padding: 50px 10vw;
   }
   .nav-right {
     display: none;
   }
   .nav-left h1 {
     font-size: 25px;
+  }
+  .mobile-menu {
+    display: block;
+    font-size: 1.4rem;
+    cursor: pointer;
   }
   main {
     flex-direction: column;
@@ -196,15 +235,32 @@ form h2 {
   .nav-left h1 {
     font-size: 25px;
   }
+  .mobile-menu {
+    display: block;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
   main {
     flex-direction: column;
     text-align: center;
     gap: 3.5rem;
   }
   #left h1 {
-    font-size: 45px;
+    font-size: 35px;
   }
   #left p {
     padding-right: 0;
+    font-size: 13px;
+  }
+  form h2 {
+    font-size: 25px;
+  }
+  .inputs input {
+    height: 35px;
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+  .t_and_c {
+    width: 100%;
   }
 }

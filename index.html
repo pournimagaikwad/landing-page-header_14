@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -23,6 +33,9 @@
             <li>Feedback</li>
           </ul>
           <button class="btn">Purchase</button>
+        </div>
+        <div class="mobile-menu">
+          <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
       <main>
@@ -45,16 +58,17 @@
               <input type="email" placeholder="Your email" />
               <input type="password" placeholder="Your password" />
             </div>
+
             <div class="t_and_c">
-              <input type="checkbox" />
-              <label for="checkbox"> I agree to the Terms and Service</label>
+                <input type="checkbox" class="checkBox"/>
+             <span>I agree to the Terms and Service.</span> 
             </div>
             <div class="buttons">
               <button class="btn-1">Sign In</button>
-              <div class="middle"><span></span>or <span></span></div>
+              <hr> <p>or</p>
               <button class="btn-2">Login via Twitter</button>
             </div>
-            <p>Do you have an account? <a href="">Sign In</a></p>
+            <p class="sign_in">Do you have an account? <a href="#">Sign In</a></p>
           </form>
         </section>
       </main>
